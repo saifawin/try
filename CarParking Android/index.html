@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login</title>
+
+    <script src="js/angular.min.js"></script>
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+    <script src="config.js"></script>
+</head>
+<body>
+    <div data-role="page">
+        <div data-role="header">
+            <h1>Login</h1>
+        </div>
+        <div role="main" class="ui-content">
+			<div class="text-right">
+				<a href="#popupCloseRight" id="myCheck" data-rel="popup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn ui-icon-gear ui-btn-icon-left">Help</a>
+				<div data-role="popup" id="popupCloseRight" class="ui-content" style="max-width:280px">
+					<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+					<p>I have a close button at the top right corner with simple HTML markup.77777</p>
+					<p> <br> </p>
+					<p> <br> </p>
+					<p> <br> </p>
+				</div>
+		    </div>
+            <div ng-app="myApp" ng-controller="myCtrl">
+                <form action="#" ng-submit="Login()" name="myForm">
+                    <h3>User name: <input type="text" name="UserName" ng-model="UserName" required oninvalid="this.setCustomValidity('Please fill our this field')" /></h3>
+                    <h3>Password: <input type="password" name="Password" ng-model="Password" required oninvalid="this.setCustomValidity('Please fill our this field')" /></h3>
+                    <input type="submit" name="login" value="Login" />
+                    <p align="right"><a href="register.html" rel="external">Register</a></p>
+                </form>
+            </div>
+            <script>
+                var app = angular.module('myApp', []);
+                app.controller('myCtrl', function ($scope, $http, $window) {
+                    var userId = $window.sessionStorage.getItem("userId");
+                    if (userId != null) {
+                        window.location.href = "home.html";
+                    }
+
+                    $scope.Login = function () {
+                        var get = $http({
+                            method: "GET",
+                            url: ip_address + 'Users/Login?username=' + $scope.UserName + '&password=' + $scope.Password,
+                            dataType: 'json',
+                            data: {
+                                UserName: $scope.UserName,
+                                Password: $scope.Password
+                            },
+                            headers: { "Content-Type": "application/json" }
+                        }).then(function successCallback(response) {
+                            if (response.data != "null") {
+                                $window.sessionStorage.setItem("userId", response.data.Id);
+                                window.location.href = "home.html";
+                            }
+                            else
+                                alert("User name or Password incorrect");
+                        }, function errorCallback(response) {
+                            alert("Error");
+                        });
+                    }
+                });
+            </script>
+        </div>
+
+
+        <div data-role="footer">
+            <h4></h4>
+        </div>
+    </div>
+</body>
+</html>

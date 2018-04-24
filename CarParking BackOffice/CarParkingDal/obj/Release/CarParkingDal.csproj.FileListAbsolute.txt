@@ -1,0 +1,25 @@
+C:\Users\SIRIWAT\Desktop\โปรเจคที่จอดรถ\Source\CarParking Project\CarParkingDal\bin\Release\CarParkingDal.dll
+C:\Users\SIRIWAT\Desktop\โปรเจคที่จอดรถ\Source\CarParking Project\CarParkingDal\bin\Release\CarParkingDal.pdb
+C:\Users\SIRIWAT\Desktop\โปรเจคที่จอดรถ\Source\CarParking Project\CarParkingDal\bin\Release\CarParkingData.dll
+C:\Users\SIRIWAT\Desktop\โปรเจคที่จอดรถ\Source\CarParking Project\CarParkingDal\bin\Release\Dapper.Contrib.dll
+C:\Users\SIRIWAT\Desktop\โปรเจคที่จอดรถ\Source\CarParking Project\CarParkingDal\bin\Release\Dapper.dll
+C:\Users\SIRIWAT\Desktop\โปรเจคที่จอดรถ\Source\CarParking Project\CarParkingDal\bin\Release\EntityFramework.dll
+C:\Users\SIRIWAT\Desktop\โปรเจคที่จอดรถ\Source\CarParking Project\CarParkingDal\bin\Release\CarParkingData.pdb
+C:\Users\SIRIWAT\Desktop\โปรเจคที่จอดรถ\Source\CarParking Project\CarParkingDal\bin\Release\EntityFramework.xml
+C:\Users\SIRIWAT\Desktop\โปรเจคที่จอดรถ\Source\CarParking Project\CarParkingDal\obj\Release\CarParkingDal.csprojResolveAssemblyReference.cache
+C:\Users\SIRIWAT\Desktop\โปรเจคที่จอดรถ\Source\CarParking Project\CarParkingDal\obj\Release\CarParkingDal.dll
+C:\Users\SIRIWAT\Desktop\โปรเจคที่จอดรถ\Source\CarParking Project\CarParkingDal\obj\Release\CarParkingDal.pdb
+C:\Users\Peepo\Desktop\carrr\Car parking reserve production\CarParking BackOffice\CarParkingDal\bin\Release\CarParkingDal.dll
+C:\Users\Peepo\Desktop\carrr\Car parking reserve production\CarParking BackOffice\CarParkingDal\bin\Release\CarParkingDal.pdb
+C:\Users\Peepo\Desktop\carrr\Car parking reserve production\CarParking BackOffice\CarParkingDal\bin\Release\CarParkingData.dll
+C:\Users\Peepo\Desktop\carrr\Car parking reserve production\CarParking BackOffice\CarParkingDal\bin\Release\Dapper.Contrib.dll
+C:\Users\Peepo\Desktop\carrr\Car parking reserve production\CarParking BackOffice\CarParkingDal\bin\Release\Dapper.dll
+C:\Users\Peepo\Desktop\carrr\Car parking reserve production\CarParking BackOffice\CarParkingDal\bin\Release\EntityFramework.dll
+C:\Users\Peepo\Desktop\carrr\Car parking reserve production\CarParking BackOffice\CarParkingDal\bin\Release\CarParkingData.pdb
+C:\Users\Peepo\Desktop\carrr\Car parking reserve production\CarParking BackOffice\CarParkingDal\bin\Release\CarParkingData.dll.config
+C:\Users\Peepo\Desktop\carrr\Car parking reserve production\CarParking BackOffice\CarParkingDal\bin\Release\EntityFramework.xml
+C:\Users\Peepo\Desktop\carrr\Car parking reserve production\CarParking BackOffice\CarParkingDal\obj\Release\CarParkingDal.csprojResolveAssemblyReference.cache
+C:\Users\Peepo\Desktop\carrr\Car parking reserve production\CarParking BackOffice\CarParkingDal\obj\Release\CarParkingDal.csproj.CoreCompileInputs.cache
+C:\Users\Peepo\Desktop\carrr\Car parking reserve production\CarParking BackOffice\CarParkingDal\obj\Release\CarParkingDal.csproj.CopyComplete
+C:\Users\Peepo\Desktop\carrr\Car parking reserve production\CarParking BackOffice\CarParkingDal\obj\Release\CarParkingDal.dll
+C:\Users\Peepo\Desktop\carrr\Car parking reserve production\CarParking BackOffice\CarParkingDal\obj\Release\CarParkingDal.pdb

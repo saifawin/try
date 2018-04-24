@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Reservation</title>
+
+    <script src="js/angular.min.js"></script>
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+	<script src="config.js"></script>
+    <style>
+        .ui-select > .ui-btn {
+            background: black !important;
+        }
+
+        .buttonLogOut {
+            border: none;
+            color: white;
+            padding: 10px 15px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div data-role="page" ng-app="myApp" ng-controller="myCtrl">
+        <div data-role="header">
+            <h1>Reservation</h1>
+            <a style="display:none;" href=""></a>
+            <button style="background-color:red;" ng-click="Logout()" class="buttonLogOut">Log out</button>
+        </div>
+        <div role="main" class="ui-content" >
+            <h3>Building:</h3>
+            <select ng-change="BuildingFilter()" name="select-choice-a" id="select-choice-a" data-native-menu="true" ng-options="x.Name for x in building" ng-model="buildings"></select>
+            <h3>Floor:</h3>
+            <select ng-change="BuildingClassFilter()" name="select-choice-b" id="select-choice-b" data-native-menu="true" ng-options="x.Name for x in buildingClassMaster" ng-model="buildingClass"></select>
+            <h3>Park:</h3>
+            <select name="select-choice-c" id="select-choice-c" data-native-menu="true" ng-options="x.Name for x in buildingParkMaster" ng-model="buildingPark"></select>
+            <br /><br /><br />
+            <div ng-app="myApp" ng-controller="myCtrl">
+                <button ng-click="Reservation3()">Confirm</button>
+            </div>
+            <script>
+                var app = angular.module('myApp', []);
+                app.controller('myCtrl', function ($scope, $http, $window) {
+                    $http.get(ip_address+'Building').then(function (response) {
+                        $scope.building = response.data;
+                    });
+                    $scope.Reservation3 = function () {
+                        if ($scope.buildings && $scope.buildingClass && $scope.buildingPark) {
+                            window.location = "reservation3.html?buid=" + $scope.buildings.Id + "&bucid=" + $scope.buildingClass.BuildingClassId + "&bupid=" + $scope.buildingPark.BuildingParkId;
+                        } else {
+                            alert("Please fill in all information");
+                        }
+                    }
+                    $scope.BuildingFilter = function () {
+                        $http.get(ip_address+'Building/BuildingClass/' + $scope.buildings.Id).then(function (response) {
+                            $scope.buildingClassMaster = response.data;
+                        });
+                    }
+                    $scope.BuildingClassFilter = function () {
+                        $http.get(ip_address+'Building/BuildingPark/' + $scope.buildingClass.BuildingClassId).then(function (response) {
+                            $scope.buildingParkMaster = response.data;
+                        });
+                    }
+                    $scope.Logout = function () {
+                        var userId = $window.sessionStorage.getItem("userId");
+                        if (userId != null)
+                            $window.sessionStorage.removeItem("userId");
+                        window.location.href = "index.html";
+                    }
+                });
+            </script>
+        </div>
+        <div data-role="footer">
+            <h4></h4>
+        </div>
+    </div>
+</body>
+</html>
