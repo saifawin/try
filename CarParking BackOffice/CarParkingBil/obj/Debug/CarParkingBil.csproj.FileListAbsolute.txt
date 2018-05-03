@@ -1,0 +1,39 @@
+C:\Users\SIRIWAT\Desktop\Thaidevelopment.NET\CarParking\CarParkingBil\obj\Debug\CarParkingBil.csprojResolveAssemblyReference.cache
+C:\Users\SIRIWAT\Desktop\Thaidevelopment.NET\CarParking\CarParkingBil\bin\Debug\CarParkingBil.dll
+C:\Users\SIRIWAT\Desktop\Thaidevelopment.NET\CarParking\CarParkingBil\bin\Debug\CarParkingBil.pdb
+C:\Users\SIRIWAT\Desktop\Thaidevelopment.NET\CarParking\CarParkingBil\bin\Debug\CarParkingDal.dll
+C:\Users\SIRIWAT\Desktop\Thaidevelopment.NET\CarParking\CarParkingBil\bin\Debug\CarParkingData.dll
+C:\Users\SIRIWAT\Desktop\Thaidevelopment.NET\CarParking\CarParkingBil\bin\Debug\Dapper.Contrib.dll
+C:\Users\SIRIWAT\Desktop\Thaidevelopment.NET\CarParking\CarParkingBil\bin\Debug\EntityFramework.dll
+C:\Users\SIRIWAT\Desktop\Thaidevelopment.NET\CarParking\CarParkingBil\bin\Debug\Dapper.dll
+C:\Users\SIRIWAT\Desktop\Thaidevelopment.NET\CarParking\CarParkingBil\bin\Debug\CarParkingDal.pdb
+C:\Users\SIRIWAT\Desktop\Thaidevelopment.NET\CarParking\CarParkingBil\bin\Debug\CarParkingData.pdb
+C:\Users\SIRIWAT\Desktop\Thaidevelopment.NET\CarParking\CarParkingBil\bin\Debug\EntityFramework.xml
+C:\Users\SIRIWAT\Desktop\Thaidevelopment.NET\CarParking\CarParkingBil\obj\Debug\CarParkingBil.dll
+C:\Users\SIRIWAT\Desktop\Thaidevelopment.NET\CarParking\CarParkingBil\obj\Debug\CarParkingBil.pdb
+C:\Users\SIRIWAT\Desktop\โปรเจคที่จอดรถ\Source\AngularJS_Call_Controller_MVC\CarParkingBil\bin\Debug\CarParkingBil.dll
+C:\Users\SIRIWAT\Desktop\โปรเจคที่จอดรถ\Source\AngularJS_Call_Controller_MVC\CarParkingBil\bin\Debug\CarParkingBil.pdb
+C:\Users\SIRIWAT\Desktop\โปรเจคที่จอดรถ\Source\AngularJS_Call_Controller_MVC\CarParkingBil\bin\Debug\CarParkingDal.dll
+C:\Users\SIRIWAT\Desktop\โปรเจคที่จอดรถ\Source\AngularJS_Call_Controller_MVC\CarParkingBil\bin\Debug\CarParkingData.dll
+C:\Users\SIRIWAT\Desktop\โปรเจคที่จอดรถ\Source\AngularJS_Call_Controller_MVC\CarParkingBil\bin\Debug\Dapper.Contrib.dll
+C:\Users\SIRIWAT\Desktop\โปรเจคที่จอดรถ\Source\AngularJS_Call_Controller_MVC\CarParkingBil\bin\Debug\EntityFramework.dll
+C:\Users\SIRIWAT\Desktop\โปรเจคที่จอดรถ\Source\AngularJS_Call_Controller_MVC\CarParkingBil\bin\Debug\Dapper.dll
+C:\Users\SIRIWAT\Desktop\โปรเจคที่จอดรถ\Source\AngularJS_Call_Controller_MVC\CarParkingBil\bin\Debug\CarParkingDal.pdb
+C:\Users\SIRIWAT\Desktop\โปรเจคที่จอดรถ\Source\AngularJS_Call_Controller_MVC\CarParkingBil\bin\Debug\CarParkingData.pdb
+C:\Users\SIRIWAT\Desktop\โปรเจคที่จอดรถ\Source\AngularJS_Call_Controller_MVC\CarParkingBil\bin\Debug\EntityFramework.xml
+C:\Users\SIRIWAT\Desktop\โปรเจคที่จอดรถ\Source\AngularJS_Call_Controller_MVC\CarParkingBil\obj\Debug\CarParkingBil.csprojResolveAssemblyReference.cache
+C:\Users\SIRIWAT\Desktop\โปรเจคที่จอดรถ\Source\AngularJS_Call_Controller_MVC\CarParkingBil\obj\Debug\CarParkingBil.dll
+C:\Users\SIRIWAT\Desktop\โปรเจคที่จอดรถ\Source\AngularJS_Call_Controller_MVC\CarParkingBil\obj\Debug\CarParkingBil.pdb
+C:\Users\SIRIWAT\Desktop\โปรเจคที่จอดรถ\Source\CarParking Project\CarParkingBil\obj\Debug\CarParkingBil.csprojResolveAssemblyReference.cache
+C:\Users\SIRIWAT\Desktop\โปรเจคที่จอดรถ\Source\CarParking Project\CarParkingBil\bin\Debug\CarParkingBil.dll
+C:\Users\SIRIWAT\Desktop\โปรเจคที่จอดรถ\Source\CarParking Project\CarParkingBil\bin\Debug\CarParkingBil.pdb
+C:\Users\SIRIWAT\Desktop\โปรเจคที่จอดรถ\Source\CarParking Project\CarParkingBil\bin\Debug\CarParkingDal.dll
+C:\Users\SIRIWAT\Desktop\โปรเจคที่จอดรถ\Source\CarParking Project\CarParkingBil\bin\Debug\CarParkingData.dll
+C:\Users\SIRIWAT\Desktop\โปรเจคที่จอดรถ\Source\CarParking Project\CarParkingBil\bin\Debug\Dapper.Contrib.dll
+C:\Users\SIRIWAT\Desktop\โปรเจคที่จอดรถ\Source\CarParking Project\CarParkingBil\bin\Debug\Dapper.dll
+C:\Users\SIRIWAT\Desktop\โปรเจคที่จอดรถ\Source\CarParking Project\CarParkingBil\bin\Debug\EntityFramework.dll
+C:\Users\SIRIWAT\Desktop\โปรเจคที่จอดรถ\Source\CarParking Project\CarParkingBil\bin\Debug\CarParkingDal.pdb
+C:\Users\SIRIWAT\Desktop\โปรเจคที่จอดรถ\Source\CarParking Project\CarParkingBil\bin\Debug\CarParkingData.pdb
+C:\Users\SIRIWAT\Desktop\โปรเจคที่จอดรถ\Source\CarParking Project\CarParkingBil\bin\Debug\EntityFramework.xml
+C:\Users\SIRIWAT\Desktop\โปรเจคที่จอดรถ\Source\CarParking Project\CarParkingBil\obj\Debug\CarParkingBil.dll
+C:\Users\SIRIWAT\Desktop\โปรเจคที่จอดรถ\Source\CarParking Project\CarParkingBil\obj\Debug\CarParkingBil.pdb

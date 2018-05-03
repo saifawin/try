@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Register</title>
+
+    <script src="js/angular.min.js"></script>
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+	<script src="config.js"></script>
+</head>
+<body>
+    <div data-role="page">
+        <div data-role="header">
+            <h1>Register</h1>
+        </div>
+        <div role="main" class="ui-content">
+            <div ng-app="myApp" ng-controller="myCtrl">
+                <form action="#" ng-submit="Register()" name="myForm">
+                    <h2 class="intro" align="center">Register</h2>
+                    <h4 class="intro" align="center">Please fill in all information.</h4>
+                    <h3>First name: <input type="text" name="FirstName" ng-model="FirstName" required oninvalid="this.setCustomValidity('Please fill our this field')" /></h3>
+                    <h3>Last name: <input type="text" name="LastName" ng-model="LastName" required oninvalid="this.setCustomValidity('Please fill our this field')" /></h3>
+                    <h3>Telephone number: <input type="text" name="PhoneNo" ng-model="PhoneNo" required oninvalid="this.setCustomValidity('Please fill our this field')" /></h3>
+                    <h3>E-mail: <input type="text" name="Email" ng-model="Email" required oninvalid="this.setCustomValidity('Please fill our this field')" /></h3>
+					<h3>Car register no.: <input type="text" name="CarNo" ng-model="CarNo" required oninvalid="this.setCustomValidity('Please fill our this field')" /></h3>
+					<h3>Credit card no.: <input type="text" name="CardNo" ng-model="CardNo" required oninvalid="this.setCustomValidity('Please fill our this field')" /></h3>
+                    <h3>User name: <input type="text" name="UserName" ng-model="UserName" required oninvalid="this.setCustomValidity('Please fill our this field')" /></h3>
+                    <h3>Password: <input type="password" name="Password" ng-model="Password" required oninvalid="this.setCustomValidity('Please fill our this field')" /></h3>
+                    <h3>Re-Password: <input type="password" name="RePassword" ng-model="RePassword" required oninvalid="this.setCustomValidity('Please fill our this field')" equal="{{Password}}" /></h3>
+                    <span ng-show="form.RePassword.$error.equal" class="help-block">Password does not match above</span>
+                    <input type="submit" name="login" value="Register" />
+                </form>
+            </div>
+            <script>
+                var app = angular.module('myApp', []);
+                app.controller('myCtrl', function ($scope, $http, $window) {
+                    $scope.Register = function () {
+                        var post = $http({
+                            method: "POST",
+                            url: ip_address+"Users/Create",
+                            dataType: 'json',
+                            data: {
+                                FirstName: $scope.FirstName,
+                                LastName: $scope.LastName,
+                                PhoneNo: $scope.PhoneNo,
+                                Email: $scope.Email,
+                                UserName: $scope.UserName,
+                                Password: $scope.Password,
+								CarNo: $scope.CarNo,
+								CardNo: $scope.CardNo
+                            },
+                            headers: { "Content-Type": "application/json" }
+                        }).then(function successCallback(response) {
+                            alert("Save Success");
+                        }, function errorCallback(response) {
+                            alert("Error");
+                        });
+                    }
+                });
+            </script>
+        </div>
+        <div data-role="footer">
+            <h4></h4>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+C:\Users\SIRIWAT\Desktop\Thaidevelopment.NET\CarParking\CarParkingDal\bin\Debug\CarParkingDal.dll
+C:\Users\SIRIWAT\Desktop\Thaidevelopment.NET\CarParking\CarParkingDal\bin\Debug\CarParkingDal.pdb
+C:\Users\SIRIWAT\Desktop\Thaidevelopment.NET\CarParking\CarParkingDal\bin\Debug\CarParkingData.dll
+C:\Users\SIRIWAT\Desktop\Thaidevelopment.NET\CarParking\CarParkingDal\bin\Debug\Dapper.Contrib.dll
+C:\Users\SIRIWAT\Desktop\Thaidevelopment.NET\CarParking\CarParkingDal\bin\Debug\Dapper.dll
+C:\Users\SIRIWAT\Desktop\Thaidevelopment.NET\CarParking\CarParkingDal\bin\Debug\EntityFramework.dll
+C:\Users\SIRIWAT\Desktop\Thaidevelopment.NET\CarParking\CarParkingDal\bin\Debug\CarParkingData.pdb
+C:\Users\SIRIWAT\Desktop\Thaidevelopment.NET\CarParking\CarParkingDal\bin\Debug\EntityFramework.xml
+C:\Users\SIRIWAT\Desktop\Thaidevelopment.NET\CarParking\CarParkingDal\obj\Debug\CarParkingDal.csprojResolveAssemblyReference.cache
+C:\Users\SIRIWAT\Desktop\Thaidevelopment.NET\CarParking\CarParkingDal\obj\Debug\CarParkingDal.dll
+C:\Users\SIRIWAT\Desktop\Thaidevelopment.NET\CarParking\CarParkingDal\obj\Debug\CarParkingDal.pdb
+C:\Users\SIRIWAT\Desktop\โปรเจคที่จอดรถ\Source\AngularJS_Call_Controller_MVC\CarParkingDal\bin\Debug\CarParkingDal.dll
+C:\Users\SIRIWAT\Desktop\โปรเจคที่จอดรถ\Source\AngularJS_Call_Controller_MVC\CarParkingDal\bin\Debug\CarParkingDal.pdb
+C:\Users\SIRIWAT\Desktop\โปรเจคที่จอดรถ\Source\AngularJS_Call_Controller_MVC\CarParkingDal\bin\Debug\CarParkingData.dll
+C:\Users\SIRIWAT\Desktop\โปรเจคที่จอดรถ\Source\AngularJS_Call_Controller_MVC\CarParkingDal\bin\Debug\Dapper.Contrib.dll
+C:\Users\SIRIWAT\Desktop\โปรเจคที่จอดรถ\Source\AngularJS_Call_Controller_MVC\CarParkingDal\bin\Debug\Dapper.dll
+C:\Users\SIRIWAT\Desktop\โปรเจคที่จอดรถ\Source\AngularJS_Call_Controller_MVC\CarParkingDal\bin\Debug\EntityFramework.dll
+C:\Users\SIRIWAT\Desktop\โปรเจคที่จอดรถ\Source\AngularJS_Call_Controller_MVC\CarParkingDal\bin\Debug\CarParkingData.pdb
+C:\Users\SIRIWAT\Desktop\โปรเจคที่จอดรถ\Source\AngularJS_Call_Controller_MVC\CarParkingDal\bin\Debug\EntityFramework.xml
+C:\Users\SIRIWAT\Desktop\โปรเจคที่จอดรถ\Source\AngularJS_Call_Controller_MVC\CarParkingDal\obj\Debug\CarParkingDal.csprojResolveAssemblyReference.cache
+C:\Users\SIRIWAT\Desktop\โปรเจคที่จอดรถ\Source\AngularJS_Call_Controller_MVC\CarParkingDal\obj\Debug\CarParkingDal.dll
+C:\Users\SIRIWAT\Desktop\โปรเจคที่จอดรถ\Source\AngularJS_Call_Controller_MVC\CarParkingDal\obj\Debug\CarParkingDal.pdb
+C:\Users\SIRIWAT\Desktop\โปรเจคที่จอดรถ\Source\CarParking Project\CarParkingDal\bin\Debug\CarParkingDal.dll
+C:\Users\SIRIWAT\Desktop\โปรเจคที่จอดรถ\Source\CarParking Project\CarParkingDal\bin\Debug\CarParkingDal.pdb
+C:\Users\SIRIWAT\Desktop\โปรเจคที่จอดรถ\Source\CarParking Project\CarParkingDal\bin\Debug\CarParkingData.dll
+C:\Users\SIRIWAT\Desktop\โปรเจคที่จอดรถ\Source\CarParking Project\CarParkingDal\bin\Debug\Dapper.Contrib.dll
+C:\Users\SIRIWAT\Desktop\โปรเจคที่จอดรถ\Source\CarParking Project\CarParkingDal\bin\Debug\Dapper.dll
+C:\Users\SIRIWAT\Desktop\โปรเจคที่จอดรถ\Source\CarParking Project\CarParkingDal\bin\Debug\EntityFramework.dll
+C:\Users\SIRIWAT\Desktop\โปรเจคที่จอดรถ\Source\CarParking Project\CarParkingDal\bin\Debug\CarParkingData.pdb
+C:\Users\SIRIWAT\Desktop\โปรเจคที่จอดรถ\Source\CarParking Project\CarParkingDal\bin\Debug\EntityFramework.xml
+C:\Users\SIRIWAT\Desktop\โปรเจคที่จอดรถ\Source\CarParking Project\CarParkingDal\obj\Debug\CarParkingDal.csprojResolveAssemblyReference.cache
+C:\Users\SIRIWAT\Desktop\โปรเจคที่จอดรถ\Source\CarParking Project\CarParkingDal\obj\Debug\CarParkingDal.dll
+C:\Users\SIRIWAT\Desktop\โปรเจคที่จอดรถ\Source\CarParking Project\CarParkingDal\obj\Debug\CarParkingDal.pdb
+C:\Users\Peepo\Desktop\car1\Car parking reserve production\CarParking BackOffice\CarParkingDal\bin\Debug\CarParkingDal.dll
+C:\Users\Peepo\Desktop\car1\Car parking reserve production\CarParking BackOffice\CarParkingDal\bin\Debug\CarParkingDal.pdb
+C:\Users\Peepo\Desktop\car1\Car parking reserve production\CarParking BackOffice\CarParkingDal\bin\Debug\CarParkingData.dll
+C:\Users\Peepo\Desktop\car1\Car parking reserve production\CarParking BackOffice\CarParkingDal\bin\Debug\Dapper.Contrib.dll
+C:\Users\Peepo\Desktop\car1\Car parking reserve production\CarParking BackOffice\CarParkingDal\bin\Debug\Dapper.dll
+C:\Users\Peepo\Desktop\car1\Car parking reserve production\CarParking BackOffice\CarParkingDal\bin\Debug\EntityFramework.dll
+C:\Users\Peepo\Desktop\car1\Car parking reserve production\CarParking BackOffice\CarParkingDal\bin\Debug\CarParkingData.pdb
+C:\Users\Peepo\Desktop\car1\Car parking reserve production\CarParking BackOffice\CarParkingDal\bin\Debug\EntityFramework.xml
+C:\Users\Peepo\Desktop\car1\Car parking reserve production\CarParking BackOffice\CarParkingDal\obj\Debug\CarParkingDal.csprojResolveAssemblyReference.cache
+C:\Users\Peepo\Desktop\car1\Car parking reserve production\CarParking BackOffice\CarParkingDal\obj\Debug\CarParkingDal.dll
+C:\Users\Peepo\Desktop\car1\Car parking reserve production\CarParking BackOffice\CarParkingDal\obj\Debug\CarParkingDal.pdb

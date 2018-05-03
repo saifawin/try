@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ParkingDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Booking">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" />
+    <Property Name="BuildingParkId" Type="Int32" />
+    <NavigationProperty Name="Building" Relationship="Self.FK_Booking_Building" FromRole="Booking" ToRole="Building" />
+    <NavigationProperty Name="Users" Relationship="Self.FK_Booking_User" FromRole="Booking" ToRole="Users" />
+    <Property Name="TimeStamp" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="BuildingPark" Relationship="ParkingDBModel.FK_Booking_BuildingPark" FromRole="Booking" ToRole="BuildingPark" />
+  </EntityType>
+  <EntityType Name="Building">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Remark" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Booking" Relationship="Self.FK_Booking_Building" FromRole="Building" ToRole="Booking" />
+    <NavigationProperty Name="BuildingClass" Relationship="Self.FK_BuildingClass_Building" FromRole="Building" ToRole="BuildingClass" />
+  </EntityType>
+  <EntityType Name="BuildingClass">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BuildingId" Type="Int32" />
+    <Property Name="Remark" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Building" Relationship="Self.FK_BuildingClass_Building" FromRole="BuildingClass" ToRole="Building" />
+    <NavigationProperty Name="BuildingPark" Relationship="Self.FK_BuildingPark_BuildingClass" FromRole="BuildingClass" ToRole="BuildingPark" />
+    <Property Name="BuildingClassMasterId" Type="Int32" />
+    <NavigationProperty Name="BuildingClassMaster" Relationship="ParkingDBModel.FK_BuildingClass_BuildingClassMaster" FromRole="BuildingClass" ToRole="BuildingClassMaster" />
+  </EntityType>
+  <EntityType Name="BuildingPark">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BuildingClassId" Type="Int32" />
+    <Property Name="Remark" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="BuildingClass" Relationship="Self.FK_BuildingPark_BuildingClass" FromRole="BuildingPark" ToRole="BuildingClass" />
+    <Property Name="BuildingParkMasterId" Type="Int32" />
+    <NavigationProperty Name="BuildingClassMaster" Relationship="ParkingDBModel.FK_BuildingPark_BuildingParkMaster" FromRole="BuildingPark" ToRole="BuildingClassMaster" />
+    <NavigationProperty Name="BuildingParkMaster" Relationship="ParkingDBModel.FK_BuildingPark_BuildingParkMaster1" FromRole="BuildingPark" ToRole="BuildingParkMaster" />
+    <Property Name="StatusId" Type="Int32" />
+    <NavigationProperty Name="General" Relationship="ParkingDBModel.FK_BuildingPark_Status" FromRole="BuildingPark" ToRole="General" />
+    <NavigationProperty Name="Booking" Relationship="ParkingDBModel.FK_Booking_BuildingPark" FromRole="BuildingPark" ToRole="Booking" />
+  </EntityType>
+  <EntityType Name="General">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TypeCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Value" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="BuildingPark" Relationship="ParkingDBModel.FK_BuildingPark_Status" FromRole="General" ToRole="BuildingPark" />
+  </EntityType>
+  <EntityType Name="Payment">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" />
+    <Property Name="Date" Type="DateTime" Precision="3" />
+    <Property Name="StatusId" Type="Int32" />
+    <Property Name="Total" Type="Decimal" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PhoneNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UserName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Booking" Relationship="Self.FK_Booking_User" FromRole="Users" ToRole="Booking" />
+  </EntityType>
+  <Association Name="FK_Booking_Building">
+    <End Role="Building" Type="Self.Building" Multiplicity="0..1" />
+    <End Role="Booking" Type="Self.Booking" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Building">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Booking">
+        <PropertyRef Name="BuildingParkId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Booking_User">
+    <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+    <End Role="Booking" Type="Self.Booking" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Booking">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BuildingClass_Building">
+    <End Role="Building" Type="Self.Building" Multiplicity="0..1" />
+    <End Role="BuildingClass" Type="Self.BuildingClass" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Building">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="BuildingClass">
+        <PropertyRef Name="BuildingId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BuildingPark_BuildingClass">
+    <End Role="BuildingClass" Type="Self.BuildingClass" Multiplicity="0..1" />
+    <End Role="BuildingPark" Type="Self.BuildingPark" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BuildingClass">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="BuildingPark">
+        <PropertyRef Name="BuildingClassId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ParkingDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Booking" EntityType="Self.Booking" />
+    <EntitySet Name="Building" EntityType="Self.Building" />
+    <EntitySet Name="BuildingClass" EntityType="Self.BuildingClass" />
+    <EntitySet Name="BuildingPark" EntityType="Self.BuildingPark" />
+    <EntitySet Name="General" EntityType="Self.General" />
+    <EntitySet Name="Payment" EntityType="Self.Payment" />
+    <EntitySet Name="Users" EntityType="Self.Users" />
+    <AssociationSet Name="FK_Booking_Building" Association="Self.FK_Booking_Building">
+      <End Role="Building" EntitySet="Building" />
+      <End Role="Booking" EntitySet="Booking" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Booking_User" Association="Self.FK_Booking_User">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Booking" EntitySet="Booking" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BuildingClass_Building" Association="Self.FK_BuildingClass_Building">
+      <End Role="Building" EntitySet="Building" />
+      <End Role="BuildingClass" EntitySet="BuildingClass" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BuildingPark_BuildingClass" Association="Self.FK_BuildingPark_BuildingClass">
+      <End Role="BuildingClass" EntitySet="BuildingClass" />
+      <End Role="BuildingPark" EntitySet="BuildingPark" />
+    </AssociationSet>
+    <EntitySet Name="RfidStamp" EntityType="ParkingDBModel.RfidStamp" />
+    <EntitySet Name="BuildingClassMaster" EntityType="ParkingDBModel.BuildingClassMaster" />
+    <EntitySet Name="BuildingParkMaster" EntityType="ParkingDBModel.BuildingParkMaster" />
+    <AssociationSet Name="FK_BuildingClass_BuildingClassMaster" Association="ParkingDBModel.FK_BuildingClass_BuildingClassMaster">
+      <End Role="BuildingClassMaster" EntitySet="BuildingClassMaster" />
+      <End Role="BuildingClass" EntitySet="BuildingClass" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BuildingPark_BuildingParkMaster" Association="ParkingDBModel.FK_BuildingPark_BuildingParkMaster">
+      <End Role="BuildingClassMaster" EntitySet="BuildingClassMaster" />
+      <End Role="BuildingPark" EntitySet="BuildingPark" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BuildingPark_BuildingParkMaster1" Association="ParkingDBModel.FK_BuildingPark_BuildingParkMaster1">
+      <End Role="BuildingParkMaster" EntitySet="BuildingParkMaster" />
+      <End Role="BuildingPark" EntitySet="BuildingPark" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BuildingPark_Status" Association="ParkingDBModel.FK_BuildingPark_Status">
+      <End Role="General" EntitySet="General" />
+      <End Role="BuildingPark" EntitySet="BuildingPark" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Booking_BuildingPark" Association="ParkingDBModel.FK_Booking_BuildingPark">
+      <End Role="BuildingPark" EntitySet="BuildingPark" />
+      <End Role="Booking" EntitySet="Booking" />
+    </AssociationSet>
+    <EntitySet Name="RfidConfig" EntityType="ParkingDBModel.RfidConfig" />
+  </EntityContainer>
+  <EntityType Name="RfidStamp">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UID" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Date" Type="DateTime" Precision="3" />
+    <Property Name="Status" Type="String" MaxLength="3" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="BuildingClassMaster">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="BuildingClass" Relationship="ParkingDBModel.FK_BuildingClass_BuildingClassMaster" FromRole="BuildingClassMaster" ToRole="BuildingClass" />
+    <NavigationProperty Name="BuildingPark" Relationship="ParkingDBModel.FK_BuildingPark_BuildingParkMaster" FromRole="BuildingClassMaster" ToRole="BuildingPark" />
+  </EntityType>
+  <EntityType Name="BuildingParkMaster">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="BuildingPark" Relationship="ParkingDBModel.FK_BuildingPark_BuildingParkMaster1" FromRole="BuildingParkMaster" ToRole="BuildingPark" />
+  </EntityType>
+  <Association Name="FK_BuildingClass_BuildingClassMaster">
+    <End Type="ParkingDBModel.BuildingClassMaster" Role="BuildingClassMaster" Multiplicity="0..1" />
+    <End Type="ParkingDBModel.BuildingClass" Role="BuildingClass" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BuildingClassMaster">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="BuildingClass">
+        <PropertyRef Name="BuildingClassMasterId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BuildingPark_BuildingParkMaster">
+    <End Type="ParkingDBModel.BuildingClassMaster" Role="BuildingClassMaster" Multiplicity="0..1" />
+    <End Type="ParkingDBModel.BuildingPark" Role="BuildingPark" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BuildingClassMaster">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="BuildingPark">
+        <PropertyRef Name="BuildingParkMasterId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BuildingPark_BuildingParkMaster1">
+    <End Type="ParkingDBModel.BuildingParkMaster" Role="BuildingParkMaster" Multiplicity="0..1" />
+    <End Type="ParkingDBModel.BuildingPark" Role="BuildingPark" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BuildingParkMaster">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="BuildingPark">
+        <PropertyRef Name="BuildingParkMasterId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BuildingPark_Status">
+    <End Type="ParkingDBModel.General" Role="General" Multiplicity="0..1" />
+    <End Type="ParkingDBModel.BuildingPark" Role="BuildingPark" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="General">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="BuildingPark">
+        <PropertyRef Name="StatusId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Booking_BuildingPark">
+    <End Type="ParkingDBModel.BuildingPark" Role="BuildingPark" Multiplicity="0..1" />
+    <End Type="ParkingDBModel.Booking" Role="Booking" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BuildingPark">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Booking">
+        <PropertyRef Name="BuildingParkId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="RfidConfig">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RfidUid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CarNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>

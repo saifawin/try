@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Reservation</title>
+
+    <script src="js/angular.min.js"></script>
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+	<script src="config.js"></script>
+    <style>
+        .button {
+            background-color: #d0c47e;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        .buttonLogOut {
+            border: none;
+            color: white;
+            padding: 10px 15px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div data-role="page" ng-app="myApp" ng-controller="myCtrl">
+        <div data-role="header">
+            <h1>Reservation</h1>
+            <a style="display:none;" href=""></a>
+            <button style="background-color:red;" ng-click="Logout()" class="buttonLogOut">Log out</button>
+        </div>
+        <div role="main" class="ui-content" >
+            <div align="center">
+                <h3 align="center" class="button">{{available}} Left</h3>
+            </div>
+            <div class="ui-grid-b" ng-repeat="x in buildingPark">
+                <div class="ui-block-a"><div class="ui-bar ui-bar-a" style="height:60px;background-color:{{x.Color}};color:white;">{{ x.Name }}</div></div>
+                <div class="ui-block-b"><div class="ui-bar ui-bar-a" style="height:60px;background-color:burlywood;color:white;">Block B</div></div>
+                <div class="ui-block-c"><div class="ui-bar ui-bar-a" style="height:60px;background-color:burlywood;color:white;">Block C</div></div>
+            </div><!-- /grid-c -->
+            <div>
+                <button ng-click="Refresh()">Refresh</button>
+                <button ng-click="Reservation2()" ng-disabled="(available==0) ? true: false">Reservation</button>
+            </div>
+            <script>
+                var app = angular.module('myApp', []);
+                app.controller('myCtrl', function ($scope, $http, $window) {
+                    var url = new URL(window.location.href);
+                    var bucid = url.searchParams.get("bucid");
+                    var bupid = url.searchParams.get("bupid");
+                    var userId = $window.sessionStorage.getItem("userId");
+
+                    $http.get(ip_address+'Building/countAllClassAvailable/' + bucid).then(function (response) {
+                        $scope.available = response.data;
+                    });
+                    $http.get(ip_address+'Building/BuildingParkAll/' + bucid).then(function (response) {
+                        $scope.buildingPark = response.data;
+                    });
+                    $scope.Reservation2 = function () {
+                        var post = $http({
+                            method: "POST",
+                            url: ip_address+"Booking/Create",
+                            dataType: 'json',
+                            data: {
+                                UserId: userId,
+                                BuildingParkId: bupid,
+                                StatusCode: "BK"
+                            },
+                            headers: { "Content-Type": "application/json" }
+                        }).then(function successCallback(response) {
+							if(response.data)
+							{
+								if(response.data.Code)
+								{
+									alert(response.data.Message);
+								}
+							}
+							else
+							{
+								alert("Save Success");
+							}
+                            location.reload();
+                        }, function errorCallback(response) {
+                            alert("Error");
+                        });                       
+                    }
+                    $scope.Refresh = function () {
+                        $http.get(ip_address+'Building/countAllClassAvailable/' + bucid).then(function (response) {
+                            $scope.available = response.data;
+                        });
+                        $http.get(ip_address+'Building/BuildingParkAll/' + bucid).then(function (response) {
+                            $scope.buildingPark = response.data;
+                        });
+                    }
+                    $scope.Logout = function () {                       
+                        if (userId != null)
+                            $window.sessionStorage.removeItem("userId");
+                        window.location.href = "index.html";
+                    }
+                });
+            </script>
+        </div>
+        <div data-role="footer">
+            <h4></h4>
+        </div>
+    </div>
+</body>
+</html>

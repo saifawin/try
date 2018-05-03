@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="9c51afc181f8462cab99317170a0dda8" Name="Diagram1">
+        <EntityTypeShape EntityType="ParkingDBModel.Booking" Width="1.5" PointX="3" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ParkingDBModel.Building" Width="1.5" PointX="0.75" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ParkingDBModel.BuildingClass" Width="1.5" PointX="3" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ParkingDBModel.BuildingPark" Width="1.5" PointX="5.25" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ParkingDBModel.General" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ParkingDBModel.Payment" Width="1.5" PointX="5.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ParkingDBModel.Users" Width="1.5" PointX="0.75" PointY="7.625" IsExpanded="true" />
+        <AssociationConnector Association="ParkingDBModel.FK_Booking_Building" ManuallyRouted="false" />
+        <AssociationConnector Association="ParkingDBModel.FK_Booking_User" ManuallyRouted="false" />
+        <AssociationConnector Association="ParkingDBModel.FK_BuildingClass_Building" ManuallyRouted="false" />
+        <AssociationConnector Association="ParkingDBModel.FK_BuildingPark_BuildingClass" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="ParkingDBModel.RfidStamp" Width="1.5" PointX="7.375" PointY="5.75" />
+        <EntityTypeShape EntityType="ParkingDBModel.BuildingClassMaster" Width="1.5" PointX="0.75" PointY="7.875" />
+        <EntityTypeShape EntityType="ParkingDBModel.BuildingParkMaster" Width="1.5" PointX="11.375" PointY="0.75" />
+        <AssociationConnector Association="ParkingDBModel.FK_BuildingClass_BuildingClassMaster" />
+        <AssociationConnector Association="ParkingDBModel.FK_BuildingPark_BuildingParkMaster" />
+        <AssociationConnector Association="ParkingDBModel.FK_BuildingPark_BuildingParkMaster1" />
+        <AssociationConnector Association="ParkingDBModel.FK_BuildingPark_Status" />
+        <AssociationConnector Association="ParkingDBModel.FK_Booking_BuildingPark" />
+        <EntityTypeShape EntityType="ParkingDBModel.RfidConfig" Width="1.5" PointX="8.375" PointY="0.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
